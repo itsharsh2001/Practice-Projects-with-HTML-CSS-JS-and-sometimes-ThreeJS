@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive with Video Background</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="showcase" id="showcase">
+        <header>
+            <h2 class="logo">Travel</h2>
+            <div class="toggle">
+                <i class="fa fa-bars" id="bars" onclick="myFunction1()"></i>
+                <i class="fa fa-times" id="times" onclick="myFunction2()"></i>
+            </div>
+        </header>
+
+        <video src="./background.mp4" muted loop autoplay class="video"></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Never Stop</h2>
+            <h3>Exploring The World</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti tempore alias vitae expedita placeat aperiam fuga officiis magnam distinctio nihil.</p>
+            <a href="#">Explore</a>
+        </div>
+
+        <ul class="social">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+
+
+
+    <script>
+        times = document.getElementById("times");
+        bars = document.getElementById("bars");
+
+        function myFunction1()
+        {        
+            document.getElementById("times").style.display = "inline-block"
+            document.getElementById("bars").style.display = "none"
+            document.getElementById("showcase").classList.add("active")
+        }
+
+        function myFunction2()
+        {    
+            document.getElementById("times").style.display = "none"
+            document.getElementById("bars").style.display = "inline-block"
+            document.getElementById("showcase").classList.remove("active")
+        }
+        
+
+    </script>
+</body>
+</html>
